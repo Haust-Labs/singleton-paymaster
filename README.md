@@ -38,15 +38,6 @@ Verifying Mode:
 payment in the `postOp` call. If a user does this, the userOperation will be
 funded from their Pimlico balance.
 
-## MagicSpendPlusMinusHalf Architecture
-
-`src/MagicSpendPlusMinusHalf.sol` is a simple permissioned implementation of
-MagicSpend. Users who have a valid signed WithdrawRequest can call the contracts
-`requestWithdraw` method to pull funds from. Before and after fulfilling the
-user's withdraw request, the contract will run pre and post calls. These calls
-are arbitrary and allow the contract to provide just in time liquidity by doing
-things such as swapping to the requested token at time of withdraw.
-
 ## Core Contracts
 
 | Contract                 | Description                                                                                                                                                  |
